@@ -61,6 +61,7 @@ target_include_directories(${PROJECT_NAME}
 #include_directories("${ENGINE_THIRD_PARTIES_PATH}/GTest/Include/")
 
 target_link_libraries(${PROJECT_NAME} 
+    Case
     debug ${CONAN_LIBS_DEBUG}
     optimized ${CONAN_LIBS_RELEASE}
 )
