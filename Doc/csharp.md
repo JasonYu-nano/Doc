@@ -2,9 +2,33 @@
 
 **委托和事件**
 
+* [委托](https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/reference-types)是安全封装方法的类型
+
+  ```c#
+  public delegate void Del(string message);
+  
+  public delegate void Action<T...>();
+  public delegate TResult Func<T..., out TResult>();
+  ```
+
+* 事件是对多播委托的封装
+
+* 事件只能+=来连接，事件确保只有包容类才能触发事件通知
+
+  ```c#
+  public delegate void EventHandler(...);
+  public event EventHandler PubEvent;
+  ```
+
+  
+
 **闭包原理**
 
 **弱引用和强引用**
+
+* ```c#
+  WeakReference ref1 = new WeakReference(new MyObject());
+  ```
 
 **GC 优化**
 
